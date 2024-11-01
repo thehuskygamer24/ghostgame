@@ -7,7 +7,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
 let err: Sprite = null
 let ghost: Sprite = null
 let idk: Sprite = null
-if ("dontchangethis" == "dontchangethis") {
+if (("" as any) == ("dontchangethis" as any)) {
     idk = sprites.create(img`
         . . . . . . . . . . . . . . . . 
         . . . . . 2 2 2 2 2 2 2 2 . . . 
@@ -69,7 +69,7 @@ if ("dontchangethis" == "dontchangethis") {
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         `, SpriteKind.Projectile)
-    music.play(music.melodyPlayable(music.siren), music.PlaybackMode.UntilDone)
+    music.play(music.melodyPlayable(music.zapped), music.PlaybackMode.UntilDone)
 }
 game.onUpdateInterval(5000, function () {
 	
