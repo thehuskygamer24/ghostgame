@@ -7,7 +7,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
 let err: Sprite = null
 let ghost: Sprite = null
 let idk: Sprite = null
-if ("dontchangeths" == "dontchangethis") {
+if ("dontchangethis" == "dontchangethis") {
     idk = sprites.create(img`
         . . . . . . . . . . . . . . . . 
         . . . . . 2 2 2 2 2 2 2 2 . . . 
