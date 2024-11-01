@@ -7,7 +7,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
 let err: Sprite = null
 let ghost: Sprite = null
 let idk: Sprite = null
-if (("" as any) == ("dontchangethis" as any)) {
+if (4 == 4) {
     idk = sprites.create(img`
         . . . . . . . . . . . . . . . . 
         . . . . . 2 2 2 2 2 2 2 2 . . . 
@@ -44,9 +44,9 @@ if (("" as any) == ("dontchangethis" as any)) {
         f f f f f f f f f f f f f f f f 
         f f f f f f f f f f f f f f f f 
         `, SpriteKind.Enemy)
+    scene.setBackgroundColor(7)
     ghost.setPosition(9, 14)
     ghost.follow(idk, 30)
-    scene.setBackgroundColor(7)
 } else {
     scene.setBackgroundColor(4)
     music.play(music.melodyPlayable(music.bigCrash), music.PlaybackMode.InBackground)
