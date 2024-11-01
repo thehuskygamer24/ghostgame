@@ -1,8 +1,8 @@
 controller.anyButton.onEvent(ControllerButtonEvent.Pressed, function () {
     controller.moveSprite(idk)
 })
-controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-	
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
+    game.gameOver(false)
 })
 let err: Sprite = null
 let ghost: Sprite = null
@@ -71,5 +71,5 @@ if ("fft" == "fft") {
     music.play(music.melodyPlayable(music.siren), music.PlaybackMode.UntilDone)
 }
 game.onUpdateInterval(5000, function () {
-    ghost.follow(idk, 25)
+    ghost.follow(idk, 30)
 })
