@@ -7,7 +7,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
 let err: Sprite = null
 let ghost: Sprite = null
 let idk: Sprite = null
-if ("fft" == "fft") {
+if ("dontchangethis" == "dontchangethis") {
     idk = sprites.create(img`
         . . . . . . . . . . . . . . . . 
         . . . . . 2 2 2 2 2 2 2 2 . . . 
@@ -45,6 +45,7 @@ if ("fft" == "fft") {
         f f f f f f f f f f f f f f f f 
         `, SpriteKind.Enemy)
     ghost.setPosition(9, 14)
+    ghost.follow(idk, 30)
     scene.setBackgroundColor(7)
 } else {
     scene.setBackgroundColor(4)
@@ -71,5 +72,5 @@ if ("fft" == "fft") {
     music.play(music.melodyPlayable(music.siren), music.PlaybackMode.UntilDone)
 }
 game.onUpdateInterval(5000, function () {
-    ghost.follow(idk, 30)
+	
 })
